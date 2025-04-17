@@ -4,9 +4,9 @@ import sys
 project_root = '/content/1234'
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
-print("Updated sys.path:", sys.path)
+
 from bot.deep_learning.vision_input.mark_Runner import BenchmarkRunner
-from bot.bot_manager import BotManager
+from bot.heuristic_dodge import BaseBot
 from game.game_core import Game
 from configs.bot_config import DodgeAlgorithm
 import csv
