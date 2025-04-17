@@ -1,4 +1,4 @@
-from mark_Runner import BenchmarkRunner
+from bot.deep_learning.vision_input.mark_Runner import BenchmarkRunner
 from bot.bot_manager import BotManager
 from game.game_core import Game
 from configs.bot_config import DodgeAlgorithm
