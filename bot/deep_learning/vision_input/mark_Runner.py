@@ -14,7 +14,7 @@ class BenchmarkRunner:
             for i in range(self.num_runs):
                 bot = dodgeMethod()
                 start = time.perf_counter()
-                bot.update()
+                bot.reset_action()
                 end = time.perf_counter()
                 duration = end -start
                 times.append(duration)
