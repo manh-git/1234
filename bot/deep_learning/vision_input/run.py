@@ -15,7 +15,7 @@ import csv
 
 from enum import Enum
 
-class DodgeMethod(Enum):
+class DodgeAlgorithm(Enum):
     FURTHEST_SAFE_DIRECTION = 1
     LEAST_DANGER_PATH = 2
     LEAST_DANGER_PATH_ADVANCED = 3
@@ -25,11 +25,11 @@ def main():
     
     game = Game()
     dodgeMethod = {
-    "Furthest Safe Direction": lambda: BaseBot(game, DodgeMethod.FURTHEST_SAFE_DIRECTION),
-    "Least Danger": lambda: BaseBot(game, DodgeMethod.LEAST_DANGER_PATH),
-    "Least Danger Advanced": lambda: BaseBot(game, DodgeMethod.LEAST_DANGER_PATH_ADVANCED),
-    "Opposite Threat Direction": lambda: BaseBot(game, DodgeMethod.OPPOSITE_THREAT_DIRECTION),
-    "Random Safe Zone": lambda: BaseBot(game, DodgeMethod.RANDOM_SAFE_ZONE),
+    "Furthest Safe Direction": lambda: BaseBot(game, DodgeAlgorithm.FURTHEST_SAFE_DIRECTION),
+    "Least Danger": lambda: BaseBot(game, DodgeAlgorithm.LEAST_DANGER_PATH),
+    "Least Danger Advanced": lambda: BaseBot(game, DodgeAlgorithm.LEAST_DANGER_PATH_ADVANCED),
+    "Opposite Threat Direction": lambda: BaseBot(game, DodgeAlgorithm.OPPOSITE_THREAT_DIRECTION),
+    "Random Safe Zone": lambda: BaseBot(game, DodgeAlgorithm.RANDOM_SAFE_ZONE),
 }
     runner = BenchmarkRunner()
     save_path= "/content/drive/MyDrive/game_ai/benchmark_results.csv"
